@@ -1,0 +1,23 @@
+{
+  "slug": "skill-gap-analyzer",
+  "category": "job-seeker-agents",
+  "title": "Skill Gap Analyzer",
+  "description": "AI-powered analysis comparing your skills against job requirements with personalized learning paths",
+  "tags": ["skills", "career-development", "learning", "gap-analysis"],
+  "aiProvider": "openai",
+  "modelName": "gpt-4",
+  "features": [
+    "Compare resume skills vs job requirements",
+    "Identify missing competencies and skill gaps",
+    "Priority-based skill recommendations",
+    "Personalized learning resource suggestions",
+    "Track skill development progress",
+    "Generate learning roadmaps"
+  ],
+  "sampleQuestions": [
+    "What skills am I missing for this job?",
+    "How do I close skill gaps for a senior developer role?",
+    "What courses should I take to improve my profile?",
+    "How long will it take to learn the required skills?"
+  ]
+}

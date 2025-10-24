@@ -1,0 +1,132 @@
+All agent implementations must live under:
+
+  app/agents/<category>-agents/<agent-slug>/
+
+  Example:
+
+  1/ app/agents/job-seeker-agents/resume-builder/
+
+- Each agent folder should be self-contained and include, at minimum:
+  - data/manifest.json (agent metadata)
+  - contexts/* (Provider & hooks) exporting ProviderModule
+  - _components/ (UI components used by landing & workspace)
+  - workspace/page.tsx and workspace/layout.tsx (workspace UI)
+  - page.tsx (landing page that reads data/manifest.json)
+  - README.md (copy/paste instructions)
+
+
+  2. agent Minimal manifest fields:
+
+  {
+    "slug": "resume-builder",
+    "category": "job-seeker-agents",
+    "title": "Resume Builder",
+    "description": "Short description",
+  "image": "/agents/job-seeker-agents/resume-builder/assets/resume-builder.png",
+    "tags": ["resume","cv"]
+  }
+  
+ 3. Public URLs users expect:
+  - Agent landing page: /job-seeker-agents/<slug>
+  - Agent workspace: /job-seeker-agents/<slug>/workspace
+
+
+
+  Folder structure and file names must be like this
+
+filesinside: app/agents/
+admin-agents
+agent-shared-code
+job-seeker-agents
+recruiter-agents
+
+Note: shared code among agents will reside in app/agents/agent-shared-code
+  
+
+Folders Inside: app/agents/job-seeker-agents/resume-builder/
+_components
+api
+contexts
+data
+utils
+workspace
+
+Files Inside: app/agents/job-seeker-agents/resume-builder/
+layout.tsx
+page.tsx
+README.md
+
+
+
+  Folders Inside: app/agents/job-seeker-agents/
+  resume-builder
+  Files Inside: app/agents/job-seeker-agents
+  layout.tsx
+  page.tsx
+
+
+  files inside: 
+  app/agents/job-seeker-agents/resume-builder/data/
+  manifest.ts
+  manifest.json
+
+
+
+
+
+  files inside:
+  app/agents/job-seeker-agents/resume-builder/_components/
+  Badge.tsx
+resume-builder-agent-details.tsx
+resume-builder-agent-hero.tsx
+tokens.ts
+types.ts
+
+
+
+ filesinside: app/agents/job-seeker-agents/resume-builder/contexts/
+  resume-builder-agent-context.tsx
+
+
+
+example structure.
+app/agents/
+├── admin-agents/           # For admin tools
+├── agent-shared-code/      # Shared utilities & types
+├── job-seeker-agents/      # Job seeker category
+│   ├── resume-builder/
+│   │   ├── _components/    # UI components, types, tokens
+│   │   ├── contexts/       # React context for state
+│   │   ├── data/           # manifest.json & manifest.ts
+│   │   ├── workspace/      # Workspace UI
+│   │   ├── layout.tsx      # Layout with providers
+│   │   ├── page.tsx        # Agent detail page
+│   │   └── README.md       # Agent documentation
+│   ├── cover-letter-writer/
+│   ├── interview-coach/
+│   ├── linkedin-optimizer/
+│   ├── salary-negotiator/
+│   ├── layout.tsx          # Namespace layout
+│   └── page.tsx            # Shows all job seeker agents
+└── recruiter-agents/       # Ready for recruiter tools
+Each Agent Contains
+Required:
+
+✅ data/manifest.json & data/manifest.ts - Agent metadata
+✅ page.tsx - Agent detail page
+✅ workspace/page.tsx & workspace/WorkspaceContent.tsx - Workspace
+Optional:
+
+✅ _components/ - Custom components, types, tokens
+✅ contexts/ - State management
+✅ layout.tsx - Custom layout
+✅ api/ - Agent-specific APIs
+✅ utils/ - Helper functions
+✅ README.md - Documentation
+Shared Code
+app/agents/agent-shared-code/:
+
+✅ types.ts - Common interfaces
+✅ utils.ts - Helper functions
+✅ constants.ts - App-wide constants
+✅ README.md - Usage guide

@@ -1,0 +1,23 @@
+{
+  "slug": "interview-prep",
+  "category": "job-seeker-agents",
+  "title": "Interview Prep",
+  "description": "AI-powered mock interviews with personalized feedback and evaluation",
+  "tags": ["interview", "practice", "ai-feedback", "career-prep"],
+  "aiProvider": "openai",
+  "modelName": "gpt-4",
+  "features": [
+    "Mock interview sessions with AI",
+    "Behavioral and technical question practice",
+    "Real-time answer evaluation and scoring",
+    "Personalized improvement suggestions",
+    "Track progress across multiple sessions",
+    "Custom question banks by role and industry"
+  ],
+  "sampleQuestions": [
+    "How can I prepare for behavioral interviews?",
+    "Can you generate technical questions for a software engineer role?",
+    "What are common interview mistakes to avoid?",
+    "How do I answer 'Tell me about yourself'?"
+  ]
+}

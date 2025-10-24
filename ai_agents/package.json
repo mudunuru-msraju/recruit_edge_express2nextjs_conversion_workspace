@@ -1,0 +1,29 @@
+{
+  "name": "recruitedge",
+  "version": "1.0.0",
+  "description": "RecruitEdge: A modular AI-powered recruitment platform with self-contained agents",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run dev",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "cd client && npm run build",
+    "build:server": "cd server && npm run build",
+    "db:push": "cd server && npx drizzle-kit push",
+    "db:push:force": "cd server && npx drizzle-kit push --force",
+    "db:studio": "cd server && npx drizzle-kit studio"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^0.10.3",
+    "drizzle-orm": "^0.36.4",
+    "ws": "^8.18.0",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "drizzle-kit": "^0.29.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

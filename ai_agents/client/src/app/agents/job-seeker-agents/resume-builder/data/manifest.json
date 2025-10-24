@@ -1,0 +1,25 @@
+{
+  "slug": "resume-builder",
+  "category": "job-seeker-agents",
+  "title": "Resume Builder",
+  "description": "Create professional, ATS-optimized resumes with AI-powered suggestions and multiple templates.",
+  "image": "/agents/job-seeker-agents/resume-builder/assets/resume-builder.png",
+  "tags": ["resume", "cv", "ats", "career", "job-search"],
+  "sampleQuestions": [
+    "🧾 Can you help me write a professional resume?",
+    "📋 How should I format my education section?",
+    "💡 What are some power words to add to my resume?",
+    "🔍 Can you tailor my resume for a data analyst job?",
+    "📎 How do I highlight achievements effectively?"
+  ],
+  "aiProvider": "openai",
+  "modelName": "gpt-4o",
+  "features": [
+    "Multiple professional templates",
+    "ATS keyword optimization",
+    "Real-time preview",
+    "AI-powered content suggestions",
+    "Export to PDF/DOCX",
+    "Section-by-section editing"
+  ]
+}
