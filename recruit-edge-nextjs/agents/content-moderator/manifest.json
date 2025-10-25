@@ -1,0 +1,21 @@
+{
+  "id": "content-moderator",
+  "name": "Content Moderator",
+  "description": "Automated content filtering and moderation for job postings and communications",
+  "category": "recruiter-agents",
+  "icon": "Shield",
+  "color": "red",
+  "version": "1.0.0",
+  "features": [
+    "Automated content filtering",
+    "Policy compliance checking",
+    "Inappropriate content detection",
+    "Bias identification",
+    "Legal compliance validation",
+    "Content scoring and recommendations"
+  ],
+  "routes": {
+    "landing": "/agents/content-moderator",
+    "api": "/api/agents/recruiter-agents/content-moderator"
+  }
+}

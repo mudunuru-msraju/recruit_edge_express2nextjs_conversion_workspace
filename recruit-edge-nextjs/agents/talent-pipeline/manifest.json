@@ -1,0 +1,21 @@
+{
+  "id": "talent-pipeline",
+  "name": "Talent Pipeline",
+  "description": "Manage candidate relationships and track recruitment pipeline",
+  "category": "recruiter-agents",
+  "icon": "TrendingUp",
+  "color": "purple",
+  "version": "1.0.0",
+  "features": [
+    "Candidate relationship management",
+    "Pipeline stage tracking",
+    "Automated follow-ups",
+    "Talent pool organization",
+    "Recruitment analytics",
+    "Communication history"
+  ],
+  "routes": {
+    "landing": "/agents/talent-pipeline",
+    "api": "/api/agents/recruiter-agents/talent-pipeline"
+  }
+}

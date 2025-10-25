@@ -1,0 +1,70 @@
+{
+  "id": "resume-builder",
+  "name": "Resume Builder",
+  "version": "1.0.0",
+  "category": "job-seeker-agents",
+  "description": "AI-powered resume builder with professional templates and optimization suggestions",
+  "author": "RecruitEdge",
+  "tags": ["resume", "ai", "job-seeker", "career"],
+  
+  "api": {
+    "basePath": "/api/agents/job-seeker-agents/resume-builder",
+    "endpoints": [
+      { "method": "GET", "path": "/resumes", "description": "List user resumes" },
+      { "method": "POST", "path": "/resumes", "description": "Create a new resume" },
+      { "method": "GET", "path": "/resumes/:id", "description": "Get specific resume" },
+      { "method": "PUT", "path": "/resumes/:id", "description": "Update resume" },
+      { "method": "DELETE", "path": "/resumes/:id", "description": "Delete resume" },
+      { "method": "POST", "path": "/ai/generate-summary", "description": "AI summary generation" },
+      { "method": "POST", "path": "/ai/improve-descriptions", "description": "AI description improvement" },
+      { "method": "POST", "path": "/ai/extract-keywords", "description": "Extract keywords from job description" },
+      { "method": "POST", "path": "/export/pdf", "description": "Export resume as PDF" },
+      { "method": "POST", "path": "/export/docx", "description": "Export resume as DOCX" },
+      { "method": "GET", "path": "/templates", "description": "Get available resume templates" },
+      { "method": "GET", "path": "/history", "description": "Get interaction history" },
+      { "method": "POST", "path": "/history", "description": "Save interaction history" }
+    ]
+  },
+  
+  "routes": {
+    "landing": "/agents/job-seeker-agents/resume-builder",
+    "workspace": "/agents/job-seeker-agents/resume-builder/workspace"
+  },
+  
+  "database": {
+    "tables": ["resumes", "agent_interactions"],
+    "migrations": "./lib/migrations.sql"
+  },
+  
+  "dependencies": {
+    "required": ["@tanstack/react-query", "react-hook-form", "zod", "lucide-react"],
+    "optional": ["jspdf", "docx"]
+  },
+  
+  "permissions": [
+    "read:resumes", 
+    "write:resumes", 
+    "delete:resumes", 
+    "ai:generate", 
+    "export:pdf", 
+    "export:docx"
+  ],
+  
+  "ui": {
+    "icon": "FileText",
+    "color": "#3B82F6",
+    "navigation": {
+      "category": "Job Seeker Tools",
+      "order": 1
+    }
+  },
+  
+  "export": {
+    "component": "./components/ResumeBuilder",
+    "api": "./api/route.ts",
+    "pages": {
+      "landing": "./pages/landing.tsx",
+      "workspace": "./pages/workspace.tsx"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "job-analytics",
+  "name": "Job Analytics",
+  "description": "Job posting performance analytics, application insights, and recruitment ROI tracking",
+  "category": "recruiter-agents",
+  "version": "1.0.0",
+  "author": "RecruitEdge Team",
+  "tags": ["analytics", "job-performance", "applications", "recruiting", "ROI"],
+  "capabilities": [
+    "Job posting analytics",
+    "Application tracking",
+    "Candidate insights",
+    "ROI measurement",
+    "Performance metrics",
+    "Hiring funnel analysis",
+    "Source attribution"
+  ],
+  "requiredPermissions": ["recruiter", "admin"],
+  "apiEndpoints": {
+    "jobs": "/api/agents/job-analytics/jobs",
+    "applications": "/api/agents/job-analytics/applications",
+    "candidates": "/api/agents/job-analytics/candidates",
+    "metrics": "/api/agents/job-analytics/metrics"
+  },
+  "ui": {
+    "icon": "trending-up",
+    "color": "amber",
+    "route": "/agents/job-analytics"
+  }
+}

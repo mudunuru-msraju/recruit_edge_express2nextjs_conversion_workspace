@@ -1,0 +1,21 @@
+{
+  "id": "salary-negotiator",
+  "name": "Salary Negotiator",
+  "description": "Get market-competitive salary insights and negotiation strategies",
+  "category": "job-seeker-agents",
+  "icon": "DollarSign",
+  "color": "emerald",
+  "version": "1.0.0",
+  "features": [
+    "Market salary research",
+    "Negotiation strategy development",
+    "Offer analysis and comparison",
+    "Counter-offer preparation",
+    "Compensation package evaluation",
+    "Industry benchmarking"
+  ],
+  "routes": {
+    "landing": "/agents/salary-negotiator",
+    "api": "/api/agents/job-seeker-agents/salary-negotiator"
+  }
+}

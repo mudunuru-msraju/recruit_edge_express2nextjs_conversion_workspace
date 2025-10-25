@@ -1,0 +1,21 @@
+{
+  "id": "candidate-screener",
+  "name": "Candidate Screener",
+  "description": "Automated candidate screening with AI-powered evaluation and scoring",
+  "category": "recruiter-agents",
+  "icon": "Users",
+  "color": "green",
+  "version": "1.0.0",
+  "features": [
+    "Automated resume screening",
+    "Skills assessment and scoring",
+    "Experience evaluation",
+    "Cultural fit analysis",
+    "Qualification matching",
+    "Batch processing capabilities"
+  ],
+  "routes": {
+    "landing": "/agents/candidate-screener",
+    "api": "/api/agents/recruiter-agents/candidate-screener"
+  }
+}

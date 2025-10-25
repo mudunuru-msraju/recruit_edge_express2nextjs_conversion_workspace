@@ -1,0 +1,46 @@
+{
+  "id": "job-matcher",
+  "name": "Job Matcher",
+  "description": "AI-powered job matching that analyzes skills, experience, and preferences to find the perfect job opportunities",
+  "category": "job-seeker-agents",
+  "version": "1.0.0",
+  "author": "RecruitEdge",
+  "tags": ["job-matching", "ai-analysis", "career-recommendations", "skills-matching"],
+  "capabilities": [
+    "Intelligent job matching based on skills and experience",
+    "Match score calculation with detailed breakdown", 
+    "Skills gap analysis with improvement suggestions",
+    "Salary and location compatibility scoring",
+    "Culture fit assessment",
+    "Bookmark and track job applications",
+    "AI-powered match summaries and recommendations"
+  ],
+  "permissions": [
+    "read:user-profile",
+    "read:jobs",
+    "write:job-matches",
+    "read:resumes"
+  ],
+  "routes": {
+    "api": "/api/agents/job-seeker-agents/job-matcher",
+    "landing": "/agents/job-seeker-agents/job-matcher",
+    "workspace": "/agents/job-seeker-agents/job-matcher/dashboard"
+  },
+  "dependencies": {
+    "external": ["@tanstack/react-query", "drizzle-orm", "zod"],
+    "internal": []
+  },
+  "database": {
+    "tables": ["job_matches", "agent_interactions"],
+    "migrations": "./lib/schema.ts"
+  },
+  "ai": {
+    "features": [
+      "job-matching-algorithm",
+      "skills-analysis", 
+      "career-recommendations",
+      "match-explanation"
+    ],
+    "models": ["gpt-4", "text-embedding-ada-002"]
+  }
+}

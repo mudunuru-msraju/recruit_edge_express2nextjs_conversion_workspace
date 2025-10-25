@@ -1,0 +1,76 @@
+{
+  "id": "interview-scheduler",
+  "name": "Interview Scheduler",
+  "description": "Comprehensive interview scheduling with calendar integration, availability management, and automated coordination",
+  "category": "recruiter-agents",
+  "version": "1.0.0",
+  "author": "RecruitEdge",
+  "capabilities": [
+    "Interview Scheduling",
+    "Calendar Integration",
+    "Availability Management",
+    "Automated Reminders",
+    "Meeting Coordination",
+    "Status Tracking"
+  ],
+  "interviewTypes": [
+    "behavioral",
+    "technical",
+    "case_study",
+    "system_design",
+    "coding",
+    "general"
+  ],
+  "scheduleStatuses": ["scheduled", "completed", "cancelled", "no_show", "rescheduled"],
+  "features": {
+    "scheduling": {
+      "enabled": true,
+      "description": "Create and manage interview schedules"
+    },
+    "calendarIntegration": {
+      "enabled": true,
+      "description": "Sync with external calendar systems"
+    },
+    "availabilityManagement": {
+      "enabled": true,
+      "description": "Manage interviewer and candidate availability"
+    },
+    "automatedReminders": {
+      "enabled": true,
+      "description": "Send automated email and SMS reminders"
+    },
+    "meetingCoordination": {
+      "enabled": true,
+      "description": "Coordinate video calls and meeting links"
+    },
+    "feedbackCollection": {
+      "enabled": true,
+      "description": "Collect post-interview feedback and scores"
+    }
+  },
+  "database": {
+    "tables": ["interview_schedules"],
+    "relationships": {
+      "interview_schedules": "belongs to applications, users (interviewer), users (candidate)"
+    }
+  },
+  "apiEndpoints": [
+    "GET /api/agents/recruiter-agents/interview-scheduler/schedules",
+    "POST /api/agents/recruiter-agents/interview-scheduler/schedules",
+    "GET /api/agents/recruiter-agents/interview-scheduler/schedules/[id]",
+    "PUT /api/agents/recruiter-agents/interview-scheduler/schedules/[id]",
+    "DELETE /api/agents/recruiter-agents/interview-scheduler/schedules/[id]",
+    "GET /api/agents/recruiter-agents/interview-scheduler/availability",
+    "POST /api/agents/recruiter-agents/interview-scheduler/availability/check"
+  ],
+  "dependencies": {
+    "zod": "^3.23.8",
+    "@tanstack/react-query": "^5.59.0",
+    "drizzle-orm": "^0.36.1"
+  },
+  "ui": {
+    "primaryColor": "indigo",
+    "icon": "calendar",
+    "landingPage": "/app/agents/recruiter-agents/interview-scheduler/page.tsx"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "audit-logger",
+  "name": "Audit Logger",
+  "description": "Comprehensive audit trails, security logging, compliance reporting, and activity tracking",
+  "category": "admin-agents",
+  "version": "1.0.0",
+  "author": "RecruitEdge Team",
+  "tags": ["audit", "logging", "compliance", "security", "tracking"],
+  "capabilities": [
+    "Activity logging",
+    "Security event tracking",
+    "Compliance reporting",
+    "Audit trail management",
+    "User action monitoring",
+    "Data access logging",
+    "Risk assessment"
+  ],
+  "requiredPermissions": ["admin"],
+  "apiEndpoints": {
+    "logs": "/api/agents/audit-logger/logs",
+    "events": "/api/agents/audit-logger/events",
+    "reports": "/api/agents/audit-logger/reports",
+    "compliance": "/api/agents/audit-logger/compliance"
+  },
+  "ui": {
+    "icon": "shield-check",
+    "color": "indigo",
+    "route": "/agents/audit-logger"
+  }
+}

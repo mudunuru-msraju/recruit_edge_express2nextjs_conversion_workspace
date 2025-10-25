@@ -1,0 +1,30 @@
+{
+  "id": "platform-analytics",
+  "name": "Platform Analytics",
+  "description": "Comprehensive analytics dashboard with usage statistics, user behavior insights, and performance metrics",
+  "category": "admin-agents",
+  "version": "1.0.0",
+  "author": "RecruitEdge Team",
+  "tags": ["analytics", "statistics", "insights", "reporting", "metrics"],
+  "capabilities": [
+    "Usage statistics tracking",
+    "User behavior analytics",
+    "Performance insights",
+    "Revenue analytics",
+    "Feature adoption metrics",
+    "Custom reporting",
+    "Data visualization"
+  ],
+  "requiredPermissions": ["admin"],
+  "apiEndpoints": {
+    "usage": "/api/agents/platform-analytics/usage",
+    "users": "/api/agents/platform-analytics/users",
+    "revenue": "/api/agents/platform-analytics/revenue",
+    "reports": "/api/agents/platform-analytics/reports"
+  },
+  "ui": {
+    "icon": "bar-chart",
+    "color": "purple",
+    "route": "/agents/platform-analytics"
+  }
+}

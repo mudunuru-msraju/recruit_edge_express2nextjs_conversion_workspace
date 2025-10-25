@@ -1,0 +1,30 @@
+{
+  "id": "system-monitor",
+  "name": "System Monitor",
+  "description": "Monitor system health, performance metrics, uptime, and manage alerts for the recruitment platform",
+  "category": "admin-agents",
+  "version": "1.0.0",
+  "author": "RecruitEdge Team",
+  "tags": ["monitoring", "performance", "alerts", "uptime", "health"],
+  "capabilities": [
+    "System health monitoring",
+    "Performance metrics tracking",
+    "Uptime monitoring",
+    "Alert management",
+    "Resource usage analytics",
+    "Error tracking",
+    "Service status monitoring"
+  ],
+  "requiredPermissions": ["admin"],
+  "apiEndpoints": {
+    "health": "/api/agents/admin-agents/system-monitor/health",
+    "metrics": "/api/agents/admin-agents/system-monitor/metrics",
+    "alerts": "/api/agents/admin-agents/system-monitor/alerts",
+    "uptime": "/api/agents/admin-agents/system-monitor/uptime"
+  },
+  "ui": {
+    "icon": "activity",
+    "color": "red",
+    "route": "/agents/system-monitor"
+  }
+}

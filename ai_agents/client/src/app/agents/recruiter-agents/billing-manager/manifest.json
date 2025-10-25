@@ -1,0 +1,30 @@
+{
+  "id": "billing-manager",
+  "name": "Billing Manager",
+  "description": "Comprehensive billing and subscription management with payment processing and analytics",
+  "category": "recruiter-agents",
+  "version": "1.0.0",
+  "author": "RecruitEdge Team",
+  "tags": ["billing", "subscriptions", "payments", "invoicing", "analytics"],
+  "capabilities": [
+    "Subscription management",
+    "Payment processing",
+    "Invoice generation",
+    "Billing analytics",
+    "Revenue tracking",
+    "Plan management",
+    "Payment method handling"
+  ],
+  "requiredPermissions": ["recruiter", "admin"],
+  "apiEndpoints": {
+    "subscriptions": "/api/agents/billing-manager/subscriptions",
+    "payments": "/api/agents/billing-manager/payments",
+    "invoices": "/api/agents/billing-manager/invoices",
+    "analytics": "/api/agents/billing-manager/analytics"
+  },
+  "ui": {
+    "icon": "credit-card",
+    "color": "emerald",
+    "route": "/agents/billing-manager"
+  }
+}

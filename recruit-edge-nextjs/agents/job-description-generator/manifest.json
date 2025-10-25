@@ -1,0 +1,21 @@
+{
+  "id": "job-description-generator",
+  "name": "Job Description Generator",
+  "description": "AI-powered job posting creation with templates and optimization",
+  "category": "recruiter-agents",
+  "icon": "FileText",
+  "color": "blue",
+  "version": "1.0.0",
+  "features": [
+    "AI-powered job description generation",
+    "Template library and customization",
+    "SEO optimization for job boards",
+    "Bias detection and inclusive language",
+    "Skills and requirements suggestions",
+    "Multi-format export options"
+  ],
+  "routes": {
+    "landing": "/agents/job-description-generator",
+    "api": "/api/agents/recruiter-agents/job-description-generator"
+  }
+}

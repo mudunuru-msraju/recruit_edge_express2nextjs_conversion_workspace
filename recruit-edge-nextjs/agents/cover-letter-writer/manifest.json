@@ -1,0 +1,48 @@
+{
+  "id": "cover-letter-writer",
+  "name": "Cover Letter Writer",
+  "description": "AI-powered cover letter generation and customization tool that creates personalized cover letters tailored to specific jobs and companies",
+  "category": "job-seeker-agents",
+  "version": "1.0.0",
+  "author": "RecruitEdge",
+  "tags": ["cover-letters", "ai-generation", "job-applications", "personalization"],
+  "capabilities": [
+    "AI-powered cover letter generation from resume and job description",
+    "Multiple tone options (professional, enthusiastic, creative)",
+    "Company and role-specific customization",
+    "Template library with industry-specific formats",
+    "Real-time editing with AI suggestions",
+    "Export to multiple formats (PDF, Word, Plain Text)",
+    "Integration with resume data for consistency",
+    "Cover letter analytics and improvement recommendations"
+  ],
+  "permissions": [
+    "read:user-profile",
+    "read:resumes",
+    "read:jobs",
+    "write:cover-letters",
+    "read:companies"
+  ],
+  "routes": {
+    "api": "/api/agents/job-seeker-agents/cover-letter-writer",
+    "landing": "/agents/job-seeker-agents/cover-letter-writer",
+    "workspace": "/agents/job-seeker-agents/cover-letter-writer/editor"
+  },
+  "dependencies": {
+    "external": ["@tanstack/react-query", "drizzle-orm", "zod"],
+    "internal": ["@/agents/resume-builder"]
+  },
+  "database": {
+    "tables": ["cover_letters", "agent_interactions"],
+    "migrations": "./lib/schema.ts"
+  },
+  "ai": {
+    "features": [
+      "cover-letter-generation",
+      "tone-adjustment",
+      "content-optimization",
+      "keyword-integration"
+    ],
+    "models": ["gpt-4", "gpt-3.5-turbo"]
+  }
+}

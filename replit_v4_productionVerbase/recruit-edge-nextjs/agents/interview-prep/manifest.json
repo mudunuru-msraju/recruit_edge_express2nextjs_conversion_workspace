@@ -1,0 +1,76 @@
+{
+  "id": "interview-prep",
+  "name": "Interview Prep",
+  "description": "AI-powered interview preparation with practice sessions, question generation, and answer evaluation",
+  "category": "job-seeker-agents",
+  "version": "1.0.0",
+  "author": "RecruitEdge",
+  "capabilities": [
+    "Interview Session Management",
+    "AI Question Generation",
+    "Answer Evaluation & Feedback", 
+    "Multiple Interview Types",
+    "Progress Tracking",
+    "Performance Analytics"
+  ],
+  "interviewTypes": [
+    "behavioral",
+    "technical", 
+    "case_study",
+    "system_design",
+    "coding",
+    "general"
+  ],
+  "difficultyLevels": ["easy", "medium", "hard"],
+  "features": {
+    "sessionManagement": {
+      "enabled": true,
+      "description": "Create and manage interview practice sessions"
+    },
+    "aiQuestionGeneration": {
+      "enabled": true,
+      "description": "Generate contextual interview questions based on role and type"
+    },
+    "answerEvaluation": {
+      "enabled": true,
+      "description": "AI-powered evaluation of interview answers with feedback"
+    },
+    "progressTracking": {
+      "enabled": true,
+      "description": "Track performance improvement over time"
+    },
+    "multipleInterviewTypes": {
+      "enabled": true,
+      "description": "Support for behavioral, technical, coding, and other interview types"
+    }
+  },
+  "database": {
+    "tables": ["interview_sessions", "interview_questions"],
+    "relationships": {
+      "interview_sessions": "belongs to users",
+      "interview_questions": "belongs to interview_sessions"
+    }
+  },
+  "apiEndpoints": [
+    "GET /api/agents/job-seeker-agents/interview-prep/sessions",
+    "POST /api/agents/job-seeker-agents/interview-prep/sessions", 
+    "GET /api/agents/job-seeker-agents/interview-prep/sessions/[id]",
+    "PUT /api/agents/job-seeker-agents/interview-prep/sessions/[id]",
+    "DELETE /api/agents/job-seeker-agents/interview-prep/sessions/[id]",
+    "GET /api/agents/job-seeker-agents/interview-prep/sessions/[id]/questions",
+    "POST /api/agents/job-seeker-agents/interview-prep/sessions/[id]/questions",
+    "PUT /api/agents/job-seeker-agents/interview-prep/sessions/[sessionId]/questions/[questionId]",
+    "POST /api/agents/job-seeker-agents/interview-prep/ai/generate-questions",
+    "POST /api/agents/job-seeker-agents/interview-prep/ai/evaluate-answer"
+  ],
+  "dependencies": {
+    "zod": "^3.23.8",
+    "@tanstack/react-query": "^5.59.0",
+    "drizzle-orm": "^0.36.1"
+  },
+  "ui": {
+    "primaryColor": "blue",
+    "icon": "academic-cap",
+    "landingPage": "/app/agents/job-seeker-agents/interview-prep/page.tsx"
+  }
+}

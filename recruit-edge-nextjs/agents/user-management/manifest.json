@@ -1,0 +1,21 @@
+{
+  "id": "user-management",
+  "name": "User Management",
+  "description": "Comprehensive user account and permission management system",
+  "category": "admin-agents",
+  "icon": "Settings",
+  "color": "gray",
+  "version": "1.0.0",
+  "features": [
+    "User account management",
+    "Role-based permissions",
+    "Access control",
+    "User activity monitoring",
+    "Bulk user operations",
+    "Security settings"
+  ],
+  "routes": {
+    "landing": "/agents/user-management",
+    "api": "/api/agents/admin-agents/user-management"
+  }
+}
